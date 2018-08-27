@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalles Vehículo</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="modificar()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="avatar-profile">
+    <ion-item>
+      <ion-avatar>
+        <img src="img/1.png">
+        <ion-fab right middle>
+          <button ion-fab mini color="danger"><ion-icon name="ios-camera-outline"></ion-icon></button>
+        </ion-fab>
+      </ion-avatar>
+      <h2>{{ vehiculo.marca}} - {{vehiculo.modelo }}</h2>
+      <p>{{ vehiculo.placas }}</p>
+    </ion-item>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Modelo</ion-label>
+      <ion-input type="text" value="{{vehiculo.modelo}}" [(ngModel)]="vehiculo.modelo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Marca</ion-label>
+      <ion-input type="text" value="{{vehiculo.marca}}" [(ngModel)]="vehiculo.marca"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Placas</ion-label>
+      <ion-input type="text" value="{{vehiculo.placas}}" [(ngModel)]="vehiculo.placas"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>

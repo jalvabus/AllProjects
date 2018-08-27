@@ -1,0 +1,24 @@
+<!--
+  Generated template for the PrincipalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-buttons>
+      <button ion-button icon-only (click)="mostrarMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>Hola como estas</h1>
+  <button ion-button block color="dark" (click)="cambiarPagina()">Heroes (p2)</button>
+  <button ion-button block color="primary" [navPush]="pagina3" [navParams]="{'mutante': {}}">Ir a Pagina 3</button>
+</ion-content>

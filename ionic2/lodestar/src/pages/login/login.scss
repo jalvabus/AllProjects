@@ -1,0 +1,40 @@
+.ios, .md {
+	page-login {
+		ion-content {
+			background-color: map-get($colors, dark);
+			.logo {
+				display: inline-block;
+				margin: 50px 0 15px;
+				text-align: center;
+				width: 100%;
+			}
+			ion-list {
+				margin-bottom: 0;
+				form {
+					ion-item {
+						background-color: map-get($colors, dark) !important;
+						border: 1px solid map-get($colors, primary) !important;
+						border-radius: 3px;
+						margin-bottom: 10px;
+						&.item-block {
+							.item-inner {
+								border-bottom: 0;
+								box-shadow: none !important;
+								ion-input {
+									.text-input {
+										color: map-get($colors, primary);
+										text-align: center;
+									}
+								}
+								::-webkit-input-placeholder {
+								  	color: map-get($colors, primary);
+								  	text-align: center;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

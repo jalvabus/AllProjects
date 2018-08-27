@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="abrirRegistrarVehiculo()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Buscar"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let vehiculo of vehiculos">
+      <ion-item>
+        <ion-avatar class="left-avatar" item-left>
+          <img src="img/1.png">
+        </ion-avatar>
+        <h2>{{vehiculo.marca}} {{vehiculo.modelo}}</h2>
+        <p>{{vehiculo.placas}}</p>
+      </ion-item>
+      <ion-item-options side="left">
+        <!-- *class btn-danger / style for button option -->
+        <button *ngIf="vehiculo.gps.prendido == true" ion-button class="btn-danger" (click)="apagar(vehiculo.gps._id)">
+                    <ion-icon name="power"></ion-icon>
+                </button>
+        <button *ngIf="vehiculo.gps.prendido == false" ion-button class="btn-danger" (click)="prender(vehiculo.gps._id)">
+                    <ion-icon name="power"></ion-icon>
+                </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button class="btn-dark" (click)="goMap(vehiculo.gps._id)">
+                    <ion-icon name="pin"></ion-icon>
+                </button>
+
+        <button ion-button class="btn-dark" (click)="presentActionSheet(vehiculo)">
+                    <ion-icon name="apps"></ion-icon>
+                </button>
+        <button ion-button class="btn-dark" (click)="modificarVehiculo(vehiculo)">
+                    <ion-icon name="information-circle"></ion-icon>
+                </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<!--<ion-content *ngIf="vehiculos.length <= 5">
+  <ion-card *ngFor="let vehiculo of vehiculos">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="img/4.jpg">
+      </ion-avatar>
+      <h2>{{vehiculo.marca}} {{vehiculo.modelo}} - {{vehiculo.placas}}</h2>
+      <p>
+        <ion-icon name="ios-time-outline"></ion-icon> Calle Navarra #467 El Castillo, Emiliano Zapata, Mor
+      </p>
+    </ion-item>
+    <div class="feed">
+      <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=16&size=600x300&maptype=roadmap&markers=color:red%7C%7C18.9348074,-99.2387564&key=AIzaSyDoc4Acw9GUubQxodlDdgFImLvKMzrk7NM">
+    </div>
+    <ion-row class="bg-dark">
+      <ion-col text-center>
+        <button ion-button clear small icon-left (click)="goMap(vehiculo.gps)">
+                    <ion-icon name='pin'></ion-icon>
+                    Localizar
+                </button>
+      </ion-col>      
+      <ion-col text-center>
+        <button ion-button clear small icon-left (click)="goGeovalla(vehiculo.gps)">
+          <ion-icon name='ionic'></ion-icon>
+          Geovalla
+        </button>
+      </ion-col>     
+    </ion-row>
+  </ion-card>
+</ion-content>-->

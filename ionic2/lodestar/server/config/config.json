@@ -1,0 +1,22 @@
+{
+    "database": {
+        "db": "mongodb://localhost:31845/Lodestar"
+    },
+    "port": "23289",
+    "domain": "http://localhost:8000",
+    "cryptKey": "",
+    "smtp": {
+        "host": "smtp.zoho.com",
+        "port": 465,
+        "secure": true,
+        "auth": {
+            "user": "desarrollo@ancient.mx",
+            "pass": "Nuevapass13#"
+        }
+    },
+    "secret": "ancientechgps20171125102z",
+    "conekta": {
+        "conekta_api_key": "key_3qNZxks5asjQrP5MkcLcsA",
+        "conekta_api_version": "2.0.0"
+    }
+}

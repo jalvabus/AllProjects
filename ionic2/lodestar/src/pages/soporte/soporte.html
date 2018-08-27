@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Soporte</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label>Título</ion-label>
+    <ion-input type="text" [(ngModel)]="mensaje.titulo" name="titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descripción</ion-label>
+    <ion-input [(ngModel)]="mensaje.descripcion" name="descripcion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mensaje</ion-label>
+    <ion-textarea [(ngModel)]="mensaje.mensaje" name="mensaje"></ion-textarea>
+  </ion-item>
+  <button ion-button block>Enviar</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>Teléfono: </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>777-102-19-27</ion-col>
+    </ion-row>
+  </ion-grid>
+   <ion-grid>
+    <ion-row>
+      <ion-col col-12>Correo electrónico: </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>soporte@ancient.mx</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

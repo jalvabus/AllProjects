@@ -1,0 +1,24 @@
+<!--
+  Generated template for the Pagina3Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Esta es la pagina 3</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>El mutante recibido es: {{ mutante.nombre }}</h2>
+  <img src="{{ mutante.imagen }}" alt="">
+
+  <button ion-button block color="primary" (click)="irAtras()">Ir atras con evento</button>
+  <button ion-button block color="secondary" (click)="irRoot()">Ir a root</button>
+  <button ion-button block color="danger" navPop>Atras navPop</button>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-content padding>
+    <div class="logo">
+        <img src="img/logo.png" alt="Company">
+    </div>
+    <ion-list inset>
+        <form>
+            <ion-item>
+                <ion-input type="email" name="correo_electronico" [(ngModel)]="datos.correo_electronico" required placeholder="Correo Electrónico"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" name="password" [(ngModel)]="datos.password"  placeholder="Contraseña"></ion-input>
+            </ion-item>
+            <button ion-button block (click)="login()">INICIAR SESIÓN</button>
+            <p text-center color="primary">-o-</p>
+            <button ion-button block outline (click)="formularioRegistro()">REGISTRARSE</button>
+            <p text-center>
+                <a href="#" (click)="olvideContrasena()" color="primary">Recuperación de Cuenta</a>
+            </p>
+        </form>
+    </ion-list>
+</ion-content>

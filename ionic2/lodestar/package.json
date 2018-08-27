@@ -1,0 +1,88 @@
+{
+  "name": "ionic-hello-world",
+  "version": "0.0.0",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "4.1.3",
+    "@angular/compiler": "4.1.3",
+    "@angular/compiler-cli": "4.1.3",
+    "@angular/core": "4.1.3",
+    "@angular/forms": "4.1.3",
+    "@angular/http": "4.1.3",
+    "@angular/platform-browser": "4.1.3",
+    "@angular/platform-browser-dynamic": "4.1.3",
+    "@ionic-native/core": "3.12.1",
+    "@ionic-native/splash-screen": "3.12.1",
+    "@ionic-native/status-bar": "3.12.1",
+    "@ionic/storage": "2.0.1",
+    "angular-2-local-storage": "^1.0.1",
+    "axios": "^0.16.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "conekta": "^3.1.5",
+    "connect-mongo": "^1.3.2",
+    "cordova-android": "^6.2.3",
+    "cordova-plugin-console": "1.0.5",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-splashscreen": "~4.0.1",
+    "cordova-plugin-statusbar": "2.2.2",
+    "cordova-plugin-whitelist": "1.3.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "fcm-node": "^1.2.0",
+    "intl": "^1.2.5",
+    "ionic-angular": "3.5.0",
+    "ionic-native": "^2.9.0",
+    "ionic-plugin-keyboard": "~2.2.1",
+    "ionic2-calendar": "^0.3.7",
+    "ionicons": "3.0.0",
+    "mongoose": "^4.11.1",
+    "nodemailer": "^4.0.1",
+    "passport": "^0.3.2",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
+    "randomstring": "^1.1.5",
+    "rxjs": "5.4.0",
+    "sanitizer": "^0.1.3",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.12"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "1.3.12",
+    "typescript": "2.3.4"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [],
+  "description": "ancientech-lodestar: An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-console": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

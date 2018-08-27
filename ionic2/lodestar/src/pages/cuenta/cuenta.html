@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cuenta</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="modificar()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!-- *class avatar-profile / content avatar -->
+  <div class="avatar-profile">
+    <ion-item>
+      <ion-avatar>
+        <img src="img/perfil.jpg">
+        <ion-fab right middle>
+          <button ion-fab mini color="danger"><ion-icon name="ios-camera-outline"></ion-icon></button>
+        </ion-fab>
+      </ion-avatar>
+      <h2>{{ datosUsuario.nombre }} {{ datosUsuario.apellidos }}</h2>
+      <p>{{ datosUsuario.empresa }}</p>
+    </ion-item>
+  </div>
+  <!-- *class profile-actions / content profile actions -->
+  <div class="profile-actions">
+    <ion-row no-padding>
+      <ion-col text-center>
+       <!-- <button ion-button clear>
+                    <h2></h2>
+                    <small>Dispositivos</small>
+                </button>-->
+      </ion-col>
+      <!--<ion-col text-center>
+        <button ion-button clear>
+                    <h2></h2>
+                    <small>Comprar</small>
+                </button>
+      </ion-col>-->
+    </ion-row>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Correo electrónico</ion-label>
+      <ion-input type="email" disabled value="{{ datosUsuario.correo_electronico }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Nombre</ion-label>
+      <ion-input type="text" value="{{ datosForm.nombre }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Apellidos</ion-label>
+      <ion-input type="text" value="{{ datosForm.apellidos }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Telefono</ion-label>
+      <ion-input type="text" value="{{ datosForm.telefono }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Celular</ion-label>
+      <ion-input type="text" value="{{ datosForm.celular }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Empresa</ion-label>
+      <ion-input type="text" value="{{ datosForm.empresa }}"></ion-input>
+    </ion-item>   
+  </ion-list>
+  <button ion-button block (click)="alertContrasena()">Cambiar contraseña</button>
+</ion-content>

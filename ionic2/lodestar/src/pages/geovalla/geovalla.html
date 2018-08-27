@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Geofence</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div #mapGeofence id="mapGeofence"></div>
+  <ion-fab bottom right id="boton">
+    <button ion-fab color="secondary" (click)="showCheckbox()"><ion-icon name="checkmark-circle"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right >
+    <button ion-fab color="danger" (click)="borrar()"><ion-icon name="close-circle"></ion-icon></button>
+  </ion-fab>
+</ion-content>

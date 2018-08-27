@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar color="primary">    
+    <ion-title>Tienda</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <p>Ingrese la cantidad de dispositivos que desea adquirir, así como el tiempo de servicio para continuar con el proceso
+        de compra.</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>No. de GPS</ion-label>
+      <ion-select [(ngModel)]="datos.gps" name="gps" (ionChange)="calcularPrecio()"> 
+        <ion-option>1</ion-option>
+        <ion-option>2</ion-option>
+        <ion-option>3</ion-option>
+        <ion-option>4</ion-option>
+        <ion-option>5</ion-option>
+        <ion-option>6</ion-option>
+        <ion-option>7</ion-option>
+        <ion-option>8</ion-option>
+        <ion-option>9</ion-option>
+        <ion-option>10</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked >Tiempo</ion-label>
+      <ion-select [(ngModel)]="datos.tiempo" name="tiempo" (ionChange)="calcularPrecio()">
+        <ion-option value="1">12 meses</ion-option>
+        <ion-option value="2">24 meses</ion-option>
+        <ion-option value="3">36 meses</ion-option>
+        <ion-option value="4">48 meses</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Precio</ion-label>
+      <ion-input type="text" disabled [(ngModel)]="precioTotal" name="precioTotal"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Método de pago</ion-label>
+      <ion-select  [(ngModel)]="datos.metodoPago" name="metodoPago">
+        <ion-option value="tarjeta">Tarjeta de crédito/débito</ion-option>
+        <ion-option value="oxxo">Oxxo Pay</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Titular de tarjeta</ion-label>
+      <ion-input type="text" value="{{ tokenParams.card.name }}" [(ngModel)]="tokenParams.card.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Número de tarjeta</ion-label>
+      <ion-input type="text" value="{{ tokenParams.card.number }}" [(ngModel)]="tokenParams.card.number" name="number"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label stacked>CVC</ion-label>
+            <ion-input type="text" value="{{ tokenParams.card.cvc }}" [(ngModel)]="tokenParams.card.cvc" name="cvc"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1>
+        </ion-col>
+        <ion-col col-3>
+          <ion-item>
+            <ion-label stacked>(Mes)</ion-label>
+            <ion-input type="text" value="{{ tokenParams.card.exp_month }}" [(ngModel)]="tokenParams.card.exp_month" name="exp_month"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label stacked>(Año)</ion-label>
+            <ion-input type="text" value="{{ tokenParams.card.exp_year }}" [(ngModel)]="tokenParams.card.exp_year" name="exp_year"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <button ion-button block (click)="comprar()">Comprar</button>
+</ion-content>

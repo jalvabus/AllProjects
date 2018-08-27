@@ -1,0 +1,62 @@
+.ios, .md {
+	page-cuenta {
+		.avatar-profile {
+			position: relative;
+			ion-item {
+				background-color: map-get($colors, primary);
+				padding-left: 0;
+				.item-inner {
+					border-bottom: 0;
+					ion-label {
+						text-align: center;
+						>ion-avatar {
+							position: relative;
+							img {
+								border: 5px solid lighten(map-get($colors, primary), 4% );
+								display: inline;
+								height: 120px !important;
+		    					width: 120px !important;
+							}
+						}
+						h2 {
+							color: map-get($colors, light);
+						}
+						p {
+							color: lighten(map-get($colors, primary), 15%);
+						}
+					}
+				}
+			}	
+		}
+		.profile-actions {
+			background-color: lighten(map-get($colors, danger), 3%);
+			ion-col {
+				&:first-child {
+					border-right: 1px solid map-get($colors, primary);
+				}
+				.button {
+					height: auto;
+					color: map-get($colors, light);
+					.button-inner {
+						display: block;
+						h2 {
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+		.list {
+			ion-item {
+				ion-label {
+					color: map-get($colors, primary);
+				}
+				ion-input {
+					.text-input {
+						color: lighten(map-get($colors, dark),30%);
+					}
+				}
+			}
+		}
+	}
+}

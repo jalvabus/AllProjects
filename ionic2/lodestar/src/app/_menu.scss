@@ -1,0 +1,79 @@
+.ios, .md {
+	page-contenido {
+		ion-menu {
+			ion-toolbar {
+				.toolbar-background {
+					background-color: map-get($colors, dark) !important;
+				}
+				ion-buttons {
+					.bar-button {
+						color: map-get($colors, primary);
+					}
+				}
+			}
+			ion-content {
+				background-color: map-get($colors, dark) !important;
+				.active-menu {
+				    border-left: 4px solid map-get($colors, primary) !important;
+				}
+				.item {
+					background-color: transparent;
+					border-left: 4px solid map-get($colors, dark);
+					color: map-get($colors, light);
+					&.activated {
+						background-color: lighten( map-get($colors, dark), 4% );
+						border-left: 4px solid lighten( map-get($colors, dark), 4% );
+					}
+				}
+				.list {
+					.item-block {
+						.item-inner {
+							border-bottom: 1px solid lighten(map-get($colors, dark), 6%) !important;
+						}
+						&:last-child {
+							.item-inner {
+								border-bottom: 0 !important;
+							}
+						}
+					}
+					>ion-item {
+						padding-left: 0;
+						ion-label {
+							text-align: center;
+							>ion-avatar {
+								img {
+									border: 0px solid darken( map-get($colors, dark), 4% );
+									display: inline;
+									height: 120px !important;
+			    					width: 120px !important;
+								}
+							}
+							h2 {
+								color: map-get($colors, light);
+							}
+							p {
+								color: map-get($colors, primary);
+							}
+						}
+					}
+					ion-icon {
+						&[item-left] {
+							color: lighten(map-get($colors, dark), 30%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.ios {
+	page-menu {
+		button {
+			&.item {
+				.item-inner {
+					background-image: none;
+				}
+			}
+		}
+	}
+}

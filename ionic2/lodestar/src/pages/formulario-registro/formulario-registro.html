@@ -1,0 +1,32 @@
+<ion-content padding>
+    <!-- *class logo / logo of the company -->
+    <div class="logo">
+        <img src="img/logo.png" alt="Company">
+    </div>
+    <ion-list inset>
+        <form>
+            <ion-item>
+                <ion-input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="datosUsuario.nombre"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Apellidos" name="apellidos" [(ngModel)]="datosUsuario.apellidos"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Telefono" name="telefono" [(ngModel)]="datosUsuario.telefono"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Celular" name="celular" [(ngModel)]="datosUsuario.celular"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Empresa" name="empresa" [(ngModel)]="datosUsuario.empresa"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Correo Electrónico" name="correo_electronico" [(ngModel)]="datosUsuario.correo_electronico"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Contraseña" name="password" [(ngModel)]="datosUsuario.password"></ion-input>
+            </ion-item>
+            <button ion-button block (click)="registrar()">Registrar</button>           
+        </form>
+    </ion-list>
+</ion-content>

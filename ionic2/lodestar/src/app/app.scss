@@ -1,0 +1,109 @@
+@import "menu";
+
+@mixin bg-options($bg-color) {
+	background-color: map-get($colors, $bg-color);
+	ion-icon {
+		background-color: lighten( map-get($colors, $bg-color), 4% )
+	}
+}
+
+.toolbar-background {
+	border: 0 !important;
+}
+
+ion-item {
+	ion-avatar {
+	    &[item-left] {
+	    	margin: 8px 12px 8px 0 !important;
+	    }
+	    img {
+	    	height: 40px !important;
+	    	width: 40px !important;
+	    }
+	}
+}
+
+.left-avatar{
+	&[item-left] {
+	    	margin: 8px 12px 8px 0 !important;
+	    }
+	    img {
+	    	height: 40px !important;
+	    	width: 40px !important;
+	    }
+}
+
+.header {
+	&:after {
+		background-image: none;
+	}
+}
+
+.list {
+	>.item-wrapper {
+		&:last-child {
+			.item-block {
+				border-bottom: 0;
+			}
+		}
+	}
+	>.item-block {
+		&:last-child {
+			border-bottom: 0 !important;
+			.item-inner {
+				border-bottom: 0 !important;
+			}
+		}
+	}	
+}
+
+.item {
+	h2 {
+		color: map-get($colors, primary);
+	}
+}
+
+ion-item-options {
+	.button {
+		margin: 0;
+		height: 100%;
+		padding: 0 6px;
+		&:first-child {
+			padding-left: 12px;
+		}
+		&:last-child {
+			padding-right: 12px;
+		}
+		&.btn-dark {
+			@include bg-options(dark);
+		}
+		&.btn-primary {
+			@include bg-options(primary);
+		}
+		&.btn-danger {
+			@include bg-options(danger);
+		}
+		ion-icon {
+		    border-radius: 50%;
+		    font-size: 25px;
+		    height: 40px;
+		    line-height: 40px;
+			width: 40px;
+		}
+	}
+}
+
+ion-alert {
+	.alert-wrapper {
+		background-color: map-get($colors, primary) !important;
+		.alert-head, .alert-sub-title, .alert-message {
+			color: map-get($colors, light);
+		}
+		.alert-button-group {
+			background-color: map-get($colors, light);
+			button {
+				border-top: 0 !important;
+			}
+		}
+	}
+}

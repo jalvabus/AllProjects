@@ -1,0 +1,38 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-avatar>
+          <img src="img/logo.png">
+        </ion-avatar>
+        <h2>Bienvenido</h2>
+        <p>{{ usuario.nombre }} {{ usuario.apellidos }}</p>
+      </ion-item>
+      <button menuClose ion-item *ngFor="let p of pages" [class.active-menu]="menuActive(p)" (click)="openPage(p)">
+                <ion-icon name="{{p.icon}}" item-left></ion-icon>
+                {{p.title}}
+            </button>
+      <button menuClose ion-item (click)="openTutorial()">
+                <ion-icon name="help-circle" item-left></ion-icon>
+                Tutorial
+            </button>
+      <button menuClose ion-item (click)="openCuenta()">
+                <ion-icon name="person" item-left></ion-icon>
+                Cuenta
+            </button>
+      <button menuClose ion-item (click)="openLogout()">
+                <ion-icon name="ios-arrow-round-forward-outline" item-left></ion-icon>
+                Cerrar sesión
+            </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

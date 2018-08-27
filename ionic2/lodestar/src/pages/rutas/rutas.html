@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Historial - {{viewTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-header">
+  <ion-item class="calendar">
+    <calendar  [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+      (onCurrentDateChanged)="onCurrentDateChanged($event)" (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)"
+      (onTimeSelected)="onTimeSelected($event)" step="30">
+    </calendar>
+  </ion-item>
+  <ion-item *ngIf="fechaSeleccionada == true">
+    <ion-range dualKnobs="true" [(ngModel)]="valores" min="0" max="24" snaps="true" (ionChange)="formatearHoras()">
+      <ion-label range-left>{{ horas.horaIncial }}</ion-label>
+      <ion-label range-right>{{ horas.horaFinal }}</ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-item *ngIf="fechaSeleccionada == true">
+    <button ion-button type="button" (click)="goMap()">Ver rutas</button>
+  </ion-item>
+</ion-content>
+<!--<ion-content padding>
+  <ion-item>
+    <ion-label>Fecha:</ion-label>
+    <ion-datetime (ionChange)="ingresarFecha()" displayFormat="DD/MM/YYYY" [(ngModel)]="fechas.fechaInicial"></ion-datetime>
+  </ion-item>
+  <ion-list *ngIf="fechaSeleccionada">
+    <ion-item>
+      <ion-range dualKnobs="true" [(ngModel)]="valores" min="0" max="24" snaps="true" (ionChange)="formatearHoras()">
+        <ion-label range-left>{{ horas.horaIncial }}</ion-label>
+        <ion-label range-right>{{ horas.horaFinal }}</ion-label>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <button ion-button type="button" (click)="goMap()">Ver rutas</button>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>-->

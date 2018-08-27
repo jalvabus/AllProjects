@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Localización</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+      <ion-range dualKnobs="true" [(ngModel)]="valores" min="0" max="24" snaps="true" (ionChange)="cargarLocalizaciones(fechas)">
+        <ion-label range-left>{{ horas.horaIncial }}</ion-label>
+        <ion-label range-right>{{ horas.horaFinal }}</ion-label>
+      </ion-range>
+    </ion-item>
+  <div #mapHistorial id="mapHistorial"></div>  
+</ion-content>
